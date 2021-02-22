@@ -18,6 +18,14 @@ namespace RockPaperScissors
             int option = Convert.ToInt32(Console.ReadLine());
             return option;
         }
+
+        static int SelectRandomOption()
+        {
+            Random rnd = new Random();
+            //1, 2 or 3
+            int option = rnd.Next(1, 4);
+            return option;
+        }
         static void Main(string[] args)
         {
             //Selecionar una opcion a jugar (piedra, papel o tijera)
@@ -28,8 +36,12 @@ namespace RockPaperScissors
             Console.WriteLine("Opcion seleccionada: " + option);
 
             //TODO: La computadora genera su opción a jugar de manera aleatoria (piedra, papel o tijera)
-            
+            int aiOption = SelectRandomOption();
+            Console.WriteLine("Opcion seleccionada aleatoriamente: " + aiOption);
+
             //TODO: Determinar quién ganó de acuerdo a las opciones seleccionadas, y mostrar al ganador
+
+
 
             //TODO: Jugar 3 partidas, y mencionar quién ganó al final (jugador o computadora)
         }
